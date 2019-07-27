@@ -35,20 +35,23 @@ git status
 > fatal: remote origin already exists.  
 >
 > **解决方法**
-> git remote -v 查看远程库信息
-> git remote rm origin 删除远程库列表
+>
+> 1. git remote -v 查看远程库信息
+> 2. git remote rm origin 删除远程库列表
 
 
 
 ### 删除文件
 
-删除文件夹
+​	删除文件夹
 
 > git rm -r 文件夹
 
-删除文件
+​	删除文件
 
-> git rm  p0/pycharm-professional-2019.1.3.exe
+>  git rm  p0/pycharm-professional-2019.1.3.exe
+
+
 
 
 
@@ -78,10 +81,10 @@ git status
 
 
 ### git 提交命令
-	> 1. git add -A  提交所有变化.
-	>
-	> 2. git add -u  提交 被修改和被删除文件，新创建文件无法提交。
-	> 3. git add .   提交新文件和 被修改(modified)文件，被删除文件无法提交
+
+> 1. git add -A      提交所有变化.
+> 2. git add -u      提交 被修改和被删除文件，新创建文件无法提交。
+> 3. git add .        提交新文件和 被修改(modified)文件，被删除文件无法提交
 
 ### .gitignore忽略指定文件
 
@@ -90,14 +93,13 @@ git status
 2. .gitignore文件用来告诉Git那些文件不需要跟踪。
 
    	>  1. 在工作目录中创建该文件
-   	>
-   	>     echo "test" >> .gitignore 
-
-   > 添加内容参考：
-   > https://github.com/MLEveryday/100-Days-Of-ML-Code/blob/master/.gitignore
+   2.  echo "test" >> .gitignore 
+   
+> 3. 添加内容参考：
+   >    https://github.com/MLEveryday/100-Days-Of-ML-Code/blob/master/.gitignore
 
 
 
 ### 注意
 
-> git 对文件夹大小写不敏感
+> **git 对文件夹大小写不敏感**
