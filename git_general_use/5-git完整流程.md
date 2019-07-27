@@ -92,9 +92,8 @@ git status
 
 2. .gitignore文件用来告诉Git那些文件不需要跟踪。
 
-   	>  1. 在工作目录中创建该文件
-   2.  echo "test" >> .gitignore 
-   
+   	> 1.  在工作目录中创建该文件
+    > 2.  echo "test" >> .gitignore 
 > 3. 添加内容参考：
    >    https://github.com/MLEveryday/100-Days-Of-ML-Code/blob/master/.gitignore
 
