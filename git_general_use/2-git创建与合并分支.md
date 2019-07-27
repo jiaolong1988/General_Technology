@@ -1,3 +1,5 @@
+[TOC]
+
 ### 1. 创建dev分支,并切换到dev分支
 
 > git checkout -b dev
@@ -20,7 +22,9 @@
 
 > git branch -d dev
 
-## 注意：
+
+
+### 注意：
 
 > Git中主分支为master,HEAD指向当前分支。当HEAD指向master时才指向提交。
 
