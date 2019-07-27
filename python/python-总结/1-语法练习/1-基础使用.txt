@@ -1,0 +1,39 @@
+
+
+""""
+基础语法：
+1、多行注释可以用多个 # 号，还有 ''' 和 \"""
+2、缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数
+3、首行以关键字(if、while、def和class)开始，必须以冒号( : )结束，该行之后的一行或多行代码构成代码组。
+4、如果语句很长，我们可以使用反斜杠(\)来实现多行语句
+"""
+
+# 第一个注释
+
+if True:
+    print("True")
+else:
+    print("False")
+    print("ansswer")
+
+	
+a = 1 + \
+    3
+print(a)
+
+
+
+str="Runoob"
+print(str)
+print(str[0:-1])
+print(str[2:])
+print(str[:])
+
+print(str * 2)
+print(str +'hello')
+
+
+from  sys import stdout
+x = input("请输入信息：")
+stdout.write("输出信息：" + x + '\n')
+

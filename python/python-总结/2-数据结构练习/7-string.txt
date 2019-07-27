@@ -1,0 +1,18 @@
+my_str = 'jiaolong'
+a_count = my_str.count('o')
+print('在字符串中o出现的次数：', a_count)
+
+l_indx = my_str.find('l')
+print('l的索引位置：', l_indx)
+
+# Python strip() 方法用于移除字符串头尾指定的字符（默认为空格）或字符序列。
+# 注意：该方法只能删除开头或是结尾的字符，不能删除中间部分的字符。
+# str.strip([chars]);
+
+s = "*****this is **string** example....wow!!!*****"
+print(s.strip('*'))  # 指定字符串 *
+
+
+isalpha() - 如果字符串仅包含字母字符，则返回 true，否则返回 false。
+lower() -将字符转换为小写
+	

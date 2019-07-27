@@ -1,0 +1,27 @@
+注意：set:元素不能重复
+set1 = {'tom', 'jim', 'tom'}
+
+# 空元素
+s = set()
+print(type(s))
+
+# set 类型
+s = {x for x in 'abcdefg' if x not in 'abc'}
+print(s, type(s))
+
+# 添加元素
+s.add('jiao')
+
+#添加集合
+s.update(['long'])
+
+print(s)
+
+# 删除元素
+s.discard('jiao')
+print(s)
+
+print('集合长度：', len(s))
+
+#清空集合
+s.clear()

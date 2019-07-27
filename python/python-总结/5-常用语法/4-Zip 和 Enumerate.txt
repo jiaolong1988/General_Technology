@@ -1,0 +1,72 @@
+
+
+
+print('--------------zip压缩--------------------')
+letters = ['a', 'b', 'c']
+nums = [1, 2, 3]
+zip_list = list(zip(letters, nums))
+print(zip_list)
+
+print('--------------解压--------------------')
+letters, nums = zip(*zip_list)
+list_info = list(zip(*zip_list))
+
+print('letters:%s  nums:%s' % (letters, nums))
+print(list_info)
+
+print('--------------坐标组合--------------------')
+for letter, num in zip(letters, nums):
+    print("{}: {}".format(letter, num))
+
+for line in zip(letters, nums):
+    print("{}: {}".format(*line))
+	
+
+
+print('--------------Enumerate--------------------')
+'''
+enumerate 是一个会返回元组迭代器的内置函数，这些元组包含列表的索引和值。
+'''
+letters = ['a', 'b', 'c', 'd', 'e']
+print(list(enumerate(letters)))
+
+for i, letter in enumerate(letters):
+    print(i, letter)
+
+
+案例：
+print('---------------------将列表组合成字典---------------------------')
+#将列表组合成字典
+cast_names = ["Barney", "Robin", "Ted", "Lily", "Marshall"]
+cast_heights = [72, 68, 72, 66, 76]
+
+cast = dict(zip(cast_names, cast_heights))
+print(cast)
+
+print('-------------------Zip 拆封元组-----------------------------')
+#拆封元组
+cast = (("Barney", 72), ("Robin", 68), ("Ted", 72), ("Lily", 66), ("Marshall", 76))
+
+names, heights = zip(*cast)
+print(names)
+print(heights)
+
+print('--------------zip解压就是对二维数据进行转置--------------------')	
+#zip对二维数组解压，就是将数组进行转置
+array = [[1, 4], [2, 5], [3, 6]];
+print(list(zip(*array)))
+	
+print('-------------------组合坐标-----------------------------')
+#组合坐标
+#注意，元组在 format 方法中使用 * 进行了拆封
+x_coord = [23, 53, 2, -12, 95, 103, 14, -5]
+y_coord = [677, 233, 405, 433, 905, 376, 432, 445]
+z_coord = [4, 16, -6, -42, 3, -6, 23, -1]
+labels = ["F", "J", "A", "Q", "Y", "B", "W", "X"]
+
+points = []
+for point in zip(labels, x_coord, y_coord, z_coord):
+    points.append("{}: {}, {}, {}".format(*point))
+
+for point in points:
+    print(point)

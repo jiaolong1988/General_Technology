@@ -1,0 +1,29 @@
+import sys
+import os
+
+#http://www.runoob.com/python3/python3-os-path.html
+
+print('当前文件路径：', sys.argv[0])
+print('获取当前工作目录路径：', os.getcwd())
+print('获取当前工作目录路径：', os.path.abspath('.'))
+print('获取当前工作的父目录：', os.path.abspath('..'))
+print('--------------------------------------')
+
+path = "c:\\foo.txt"
+print('路径是否存在；', os.path.exists(path))
+print('文件字节:', os.path.getsize(path))
+#删除文件
+os.remove(path)
+
+
+path = os.path.abspath('..')
+def fileNames(file_dir):
+    for root, dirs, files in os.walk(file_dir):
+        print("-----------")
+        print('当前目录：', root)
+        print('当前目录下的目录：', dirs)
+        print('当前目录下的文件', files)
+        print(" ")
+
+fileNames(path)
+

@@ -1,0 +1,31 @@
+https://blog.csdn.net/yongh701/article/details/50283689
+'''
+你可以使用 Lambda 表达式创建匿名函数，即没有名称的函数。lambda 表达式非常适合快速创建在代码中以后不会用到的函数。
+尤其对高阶函数或将其他函数作为参数的函数来说，非常实用。
+
+map() 会根据提供的 函数和数据 返回指定的结果。
+
+filter函数
+ffilter() 函数用于过滤序列，过滤掉不符合条件的元素，返回一个迭代器对象.该接收两个参数，第一个为函数，
+第二个为序列，序列的每个元素作为参数传递给函数进行判，然后返回 True 或 False，最后将返回 True 的元素放到新列表中
+filter(function, iterable)
+'''
+
+print('------------------lambda map()---------------------------')
+numbers = [
+    [34, 63, 88, 71, 29],
+    [90, 78, 51, 27, 45],
+    [63, 37, 85, 46, 22],
+    [51, 22, 34, 11, 18]
+]
+averages = list(map(lambda x: sum(x)/len(x), numbers))
+print(averages)
+
+# 提供了两个列表，对相同位置的列表数据进行相加
+sum_info = list(map(lambda x, y: x + y, [1, 3, 5, 7, 9], [2, 4, 6, 8, 10]))
+print(sum_info)
+
+print('------------------lambda filter---------------------------')
+cities = ["New York City", "Los Angeles", "Chicago", "Mountain View", "Denver", "Boston"]
+short_cities = list(filter(lambda x: len(x) < 10, cities))
+print(short_cities)

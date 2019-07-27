@@ -1,0 +1,35 @@
+#异常标准使用格式
+try:
+    open('c:\aa.txt','r')as f:
+        pass
+except Exception:
+    print('程序异常')
+finally:
+    print('finally:始终都要在最后执行。。')
+
+#try else 案例：
+while True:
+    try:
+        x = int(input('请输入x：'))
+        y = int(input('请输入y: '))
+        print('try:除法结果： ', x/y)
+    except:
+        print('except:重新输入变量')
+    else:
+        print('else:只有try中计算无异常，else才会执行，否则我不会执行。')
+        print('finally:结果计算已完成，我将执行程序最后的退出！')
+        break
+
+#自定义异常
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
+
+#抛出异常
+try:
+    raise MyError(2*2)
+except MyError as e:
+    print('My exception occurred, value:', e.value)
+

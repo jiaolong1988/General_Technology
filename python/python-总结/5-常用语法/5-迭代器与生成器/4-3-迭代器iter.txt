@@ -1,0 +1,17 @@
+迭代器循环方式
+方式一、
+list = [1,2,3,4,5]
+it = iter(list)
+
+for x in it:
+    print(x, end=" ")
+
+方式二、	
+import sys
+list = [1,2,3,4,5]
+it = iter(list)
+while True:
+    try:
+        print(next(it))
+    except StopIteration:
+        sys.exit()

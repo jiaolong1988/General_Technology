@@ -1,0 +1,20 @@
+''''
+作用：当访问集合中不存在的信息时候会报错，为了防止这种异常出现 可是使用 defaultdict函数，他将返回集合的默认值，来访时异常的出现。
+使用方法：dict =defaultdict( factory_function)
+介绍：这个factory_function可以是list、set、str等等，作用是当key不存在时，返回的是工厂函数的默认值，
+      比如list对应[ ]，str对应的是空字符串，set对应set( )，int对应0，
+'''
+#必须导入defaultdict
+from collections import defaultdict
+
+dict0 = defaultdict(dict)
+dict1 = defaultdict(int)
+dict2 = defaultdict(set)
+dict3 = defaultdict(str)
+dict4 = defaultdict(list)
+
+print(dict0[1])
+print(dict1[1])
+print(dict2[1])
+print(dict3[1])
+print(dict4[1])

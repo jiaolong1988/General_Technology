@@ -1,0 +1,17 @@
+为何要使用生成器？
+你可能会疑问，为何要使用生成器，而不使用列表。下面这段摘自 stack overflow 页面 的内容回答了这个问题：
+	生成器是构建迭代器的 “懒惰” 方式。当内存不够存储完整实现的列表时，或者计算每个列表元素的代价很高，你希望尽量推迟计算时，就可以使用生成器。但是这些元素只能遍历一次。
+
+生成器会返回一个迭代器，用于遍历数据.在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回 yield 的值,
+并在下一次执行 next() 方法时从当前位置继续运行。
+
+另一种详细的解释如下：
+
+	由于使用生成器是一次处理一个数据，在内存和存储的需求上会比使用list方式直接全部生成再存储节省很多资源。
+
+	由此区别，在处理大量数据时，经常使用生成器初步处理数据后，再进行长期存储，而不是使用 list。因为无论使用生成器还是 list，都是使用过就要丢弃的临时数据。既然功能和结果一样，那就不如用生成器。
+
+	但是生成器也有自己的局限，它产生的数据不能回溯，不像list可以任意选择。
+
+https://softwareengineering.stackexchange.com/questions/290231/when-should-i-use-a-generator-and-when-a-list-in-python/290235
+https://softwareengineering.stackexchange.com/questions/273551/should-i-prefer-python-generators-to-lists

@@ -1,0 +1,25 @@
+1、while语法
+
+flag = 1
+while flag < 10:
+	# pass是空语句，是为了保持程序结构的完整性。
+    pass
+	
+    print("this is ok:", flag)
+    flag += 1
+else:
+    print("循环结束都都会执行此语句")
+
+	
+2、for循环语法
+
+sites = ["Baidu", "Google","Runoob","Taobao"]
+for site in sites:
+    if site == "Runoob":
+       break
+    print(site)
+else:
+    print("正常循环结束后都会执行此词语","break 跳出循环后，此语句将不执行")
+
+3、	
+a = [x for x in 'abracadabra' if x not in 'abc']

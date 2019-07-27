@@ -1,0 +1,28 @@
+描述：
+	由于python是一个脚本语言，不像Java语言那样现将程序编译成二进制在运行，
+	而是动态的逐行进行解释运行。也就是说python是从第一行开始运行，没有一个统一的入口。
+	由于Java这样的语言都有一个Main函数作为程序的入口，因此
+	python程序入口为：
+	if __name__ == '__main__':
+		test() #测试方法
+
+ggg.py文件代码：
+	PI = 3.14
+	def test():
+		print('pi:',PI)
+
+	#相当于Java里的main(),当其他模块调用时，这里边的方法不执行。但只能在自己内部执行。
+	if __name__ == '__main__':
+		test()
+
+		
+Test.py文件代码
+	from ggg import PI
+
+	def calcRoundArea(radius):
+		return PI *(radius ** 2)
+
+	def main():
+		print("round area:",calcRoundArea(2))
+
+	main()

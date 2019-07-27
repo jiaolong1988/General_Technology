@@ -1,0 +1,20 @@
+print("=======tuple 日常用法========")
+tup1 = () #空元组
+tup2 = ("123",33,66.5,"sdsd","long",2123)
+tup3 = ("jiaolong",)
+
+print(tup2[1:5])
+print(tup2 + tup3)
+
+
+
+print("=======tuple 定义与变量赋值========")
+a = (1, 2)
+c, d = a
+print(c, d)
+
+
+print("=======tuple 另一种第一方式========")
+d = 5, 6
+print(type(d))
+

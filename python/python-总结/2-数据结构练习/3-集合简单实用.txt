@@ -1,0 +1,26 @@
+# list：有序
+# set:元素不能重复
+# dict:key必须是唯一的
+
+list1 = ['tom', 'jim', 'tom']
+list1.append('jiao')
+print(list1)
+
+set1 = {'tom', 'jim', 'tom'}
+set1.add('jiao')
+print(set1)
+
+dic = {}
+dic['kun'] = "peng" # 添加元素
+dic['kun'] = "long" # 修改元素
+print(dic)
+
+print(dic.keys())
+print(dic.values())
+
+
+# 空元素定义
+l = []
+s = set()
+d = {}
+print(type(l),type(s),type(d))

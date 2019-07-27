@@ -1,0 +1,8 @@
+a = b = c = 1
+print(a, b, c)
+
+d, e = 1, 3
+print(d, e)
+
+f, g, h = 1, 2, d + e
+print(f, g, h)

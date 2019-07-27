@@ -1,0 +1,42 @@
+list1 = ['tom', 'jim', 'tom', 1, 2, 3, 5, 6]
+list2 = [1,2,3]
+
+# 添加
+list1.append('jiao')
+
+# 修改
+list1[0] = 'long'
+
+print(list1)
+
+# 删除
+del list1[0]
+list1.remove(list1[0])
+ri = list1.pop()
+print('删除信息为：', ri)
+
+# 两个列表合并，组成一个新列表
+print(list1 + list2)
+
+# 将list2中的元素 扩展到 list1 中
+list1.extend(list2)
+print(list1)
+
+print('--------------排序-------------------')
+# list降序操作
+desc_list = [1, 2, 3, 4, 5]
+desc_list.sort(reverse=True)
+print(desc_list)
+
+#对list中对指定元素排序
+def take_second(elem):
+    return elem[1]
+
+random = [(1,2),(3,4),(5,6),(7,8)]
+random.sort(key=take_second)
+print(random)
+
+print('--------------遍历元素-------------------')
+dataset = [{'jiao': 1,'Province': 2}, {'jiao': 1,'Province': ''},{'Province': 3}]
+province = [item['Province'] for item in dataset if item['Province'] != '']
+print(province)

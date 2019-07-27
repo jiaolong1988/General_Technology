@@ -1,0 +1,47 @@
+# python中的generator保存的是算法，真正需要计算出值的时候才会去往下计算出值。它是一种惰性计算（lazy evaluation）。
+# generator(生成器)可以避免不必要的计算，带来性能上的提升；而且会节约空间。
+#http://www.cnblogs.com/zywscq/p/5774567.html
+
+#generator类型
+# 创建一个generator一、
+g = (x * x for x in range(10))
+print(type(g))
+
+# 创建一个generator二、
+def fib():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+f = fib()
+print(type(f))
+
+#tuple类型数据
+tuple1 = (1,2,3,4,5)
+print(type(tuple1))
+
+#list类型数据
+l = [x * x for x in range(10)]
+print(type(l))
+
+案例：
+def fibonacci(n):
+    a, b, counter = 0, 1, 0
+    while True:
+        if counter > n:
+            return
+        yield a
+        a, b = b, a+b
+        
+        counter += 1
+        print('fibonacci:',a)
+
+f = fibonacci(10)
+print('类型： ', type(f))
+
+#用到generator的时候，才会执行
+list = list(f)
+
+# for x in f:
+#     print('数据展示：', x)

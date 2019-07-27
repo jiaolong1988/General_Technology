@@ -1,0 +1,20 @@
+lambda
+# python 使用 lambda 来创建匿名函数。所谓匿名，意即不再使用 def 语句定义函数。
+# lambda 函数拥有自己的命名空间，且不能访问自己参数列表之外或全局命名空间里的参数。
+# 用处：lambda表达式非常适合快速创建在代码中以后不会用到的函数。
+# lambda [arg1 [,arg2,.....argn]]:expression
+
+sum = lambda a, b: a + b
+print(sum(10,20))
+
+
+return
+# return [表达式] 用于退出函数，返回一个表达式。不带参数值的return语句返回None。
+
+def count(a,b):
+    total = a + b
+    return total
+total = count(1,2)
+print(total)
+
+

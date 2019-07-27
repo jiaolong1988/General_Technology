@@ -1,0 +1,15 @@
+# Fibonacci series: 斐波纳契数列
+# 两个元素的总和确定了下一个数
+a, b = 0, 1
+while b < 10:
+    print(b)
+    a, b = b, a+b
+
+
+num = int(input("输入一个数字："))
+if num % 2 == 0:
+    print("被2整除")
+elif num % 3 == 0:
+    print("被3整除")
+else:
+    print("不能乘除")

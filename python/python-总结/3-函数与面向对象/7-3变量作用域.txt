@@ -1,0 +1,46 @@
+#一、作用域定义
+x = int(1.2) #内建作用域
+g_count = 0 #全局作用域
+def outer():
+    o_count = 1 # 闭包函数外的作用域
+    def inner():
+        i_count = 2 # 局部作用域
+
+
+# 二、全局变量无法再 函数内修改
+#在函数内，无法修改全局变量的值，即便 局部变量 与 全局变量 名称相同。
+total = 0
+def sum (arg1, arg2):
+    '''返回2个参数的和。'''
+    total = arg1 + arg2 # 这里是定义一个局部变量，局部变量的名称为total。全局变量无法再函数内进行访问（全局变量无法进行print）
+    print('函数内的局部变量：', total)
+    return  total
+
+sum(10 , 20)
+print('函数外的全局变量：', total)
+
+
+# 三、使用 global关键字，修改全局变量
+num = 1
+def viGlobal():
+    global num  #引入 全局变量,如果不使用global 关键字,全局变量num将无法在函数内进行修改。
+    print('全局变量：', num)
+
+    num = 123 #修改全局变量，如果不引入 golbal num,那么此时的 num 就是一个局部变量
+    print('函数内修改全局变量：',num)
+
+viGlobal()
+print('全局变量：', num)
+
+
+#四、修改闭包函数外的变量
+def outer():
+    num = 10
+    def inner():
+        nonlocal num #引入 闭包函数外 的变量num,并对num 进行操作
+        num = 100
+        print('inner: ', num)
+    inner()
+    print('outer: ', num)
+
+outer()

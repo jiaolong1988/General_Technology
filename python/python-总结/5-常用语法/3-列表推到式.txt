@@ -1,0 +1,32 @@
+
+print('-------------------列表推导式案例1----------------------------')
+#创建新的列表 first_names，其中仅包含 names 中的名字（小写形式）。
+names = ["Rick Sanchez", "Morty Smith", "Summer Smith", "Jerry Smith", "Beth Smith"]
+
+first_names = [name.split(" ")[0].lower() for name in names]
+print(first_names)
+
+
+print('------------------列表推导式2-----------------------------')
+#if x**2 表示x的平方
+squares1 = [x**2 for x in range(9) if x % 2 == 0]
+#if else
+squares2 = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]
+
+print('列表推导式 if: ', squares1)
+print('列表推导式 if else: ', squares2)
+
+
+
+
+print('-------------------列表推导式案例2----------------------------')
+#创建一个 passed 的姓名列表，少为 65 分的名字。
+scores = {
+    "Rick Sanchez": 70,
+    "Morty Smith": 35,
+    "Summer Smith": 82,
+    "Jerry Smith": 23,
+    "Beth Smith": 98
+}
+passed = [name for name, score in scores.items() if score >= 65]
+print(passed)

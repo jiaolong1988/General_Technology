@@ -1,0 +1,45 @@
+import random
+
+随机种子
+
+#设定一个随机种子,相当于指定了一个随机数
+random.seed(42)
+print('指定随机值：', random.random() ) 
+random.seed(42)
+print('指定随机值：', random.random() )  
+
+print('随机种子失效：', random.random() )  
+
+
+# # 浮点数
+print('随机浮点数(0-1): ',    random.random() )         
+print('随机浮点数(指定范围)', random.uniform(1.1,5.4) )     
+
+
+# # 整数
+# 生成一个100以内的一个随机 整数
+info = random.randrange(100)
+info
+
+
+# 生成一个 指定范围 的一个随机整数
+print('random.randint：',       random.randint(3,10))
+print('random.randrange: ', random.randrange(3,100,2) ) 
+
+
+# 生成多个随机整数 - 生成3-100，间隔为2的  5个随机整数
+info = random.sample(range(3,100), 5)
+info
+
+
+# # 随机数组
+#从指定数组中，生成随机数
+info = random.choice(['a','b','c'])
+info
+
+
+# # 打乱数组元素顺序
+random_list = [1,2,3,4,5,6,7] 
+random.shuffle(random_list)
+
+random_list

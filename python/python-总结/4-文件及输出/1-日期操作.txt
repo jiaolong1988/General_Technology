@@ -1,0 +1,18 @@
+print('-------------日期操作---------------')
+from datetime import date
+# 获得当天日期
+now = date.today()
+print(now)
+
+# 指定日期
+birthday = date(2018,1,1)
+print(birthday)
+
+# 日期的计算
+age = now - birthday
+print(age.days)
+
+#查询2018年11月有多少天，该月的第一天 是星期几
+import calendar
+month = calendar.monthrange(2018,11)
+print('该月第一天星期:',month[0]+1,'  共:',month[1])

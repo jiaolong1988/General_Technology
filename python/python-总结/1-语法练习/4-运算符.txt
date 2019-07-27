@@ -1,0 +1,42 @@
+'''
+Python成员运算符 in,not in
+Python身份运算符 is ,is not
+'''
+
+
+#1、 Python成员运算符 in、not in
+a =10
+b =2
+list =[1,2,3]
+
+if (a not in list):
+    print("a不在列表中")
+
+print("b在列表中",end=":" )
+print(b in list)
+
+
+
+#2、Python身份运算符 is ，is not
+
+a = 20
+b = 20
+
+if ( a is b ):
+    print ("1 - a 和 b 是同一对象")
+# 修改变量 b 的值
+b = 30
+if ( a is not b ):
+    print ("2 - a 和 b 不是同一对象")
+
+	
+3、is 与 == 区别：	
+'''
+is 用于判断两个引用对象是否为同一个， == 用于判断引用变量的值是否相等。
+'''
+a = [1]
+b = [1]
+
+print('-----------a != b------------------')
+print('比较对象的内容是否相同：', a == b)
+print('比较对象的地址是否相同：', a is b)

@@ -1,0 +1,32 @@
+dict = {'name': 'jl', 'age': 19 }
+
+# 添加与修改一致
+dict['sex'] = 'man'
+
+#添加集合
+dict.update({'li': 'ming'})
+
+# 删除
+del dict['sex']
+
+print(dict)
+# 清空
+dict.clear()
+
+遍历1
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, ' : ' , v)
+
+#遍历2
+for x in dic:
+    print(dic[x])
+	
+#遍历3
+for x in dic.keys():
+    print(dic[x])
+	
+# dict中最大值的key
+dic = {'a':1, 'b':2, 'c':3}
+max_index = max(dic, key = dic.get)
+print('dict中最大值的索引：',max_index)

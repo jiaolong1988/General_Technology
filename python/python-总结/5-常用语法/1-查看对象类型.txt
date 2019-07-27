@@ -1,0 +1,49 @@
+python 变量定义：
+变量名 = 对象
+a = 20 【a：是变量名,20是一个对象】
+c = people()【c：是变量名,people()是一个对象】
+
+查看数据类型方式：
+
+方式1、
+#type 查看对象的类型，语法type(对象)
+print(type(20))
+
+#isinstance检查对象是否属于此类型。语法：isinstance(对象,类型）
+print(isinstance(1, int))
+
+
+方式2、 isinstance 和 type 区别
+# isinstance 和 type 的区别在于：
+#     1、type()不会认为子类是一种父类类型。
+#     2、isinstance()会认为子类是一种父类类型。
+
+class A:
+    pass
+
+class B(A):
+    pass
+
+print('type 比较的是 数据类型是否相同：',type(B()) == A)
+print('isinstance 比较的是对象 是否属于 指定的数据类型', isinstance(B(), A))
+
+print('B是类型：%-10s  B()是对象：%s' %(B,B()))
+
+方式3、is 与 == 区别：	
+'''
+is 用于判断两个引用对象是否为同一个， == 用于判断引用变量的值是否相等。
+'''
+
+a = [1, 2, 3, 4]
+b = [1, 2, 3, 4]
+
+print('-----------a != b------------------')
+print('比较对象的内容是否相同：', a == b)
+print('比较对象的地址是否相同', a is b)
+
+print('-----------a = b------------------')
+
+#将变量b的指针指向a,这样 a与 b指向了同一对象
+a = b
+print('比较对象的内容是否相同：', a == b)
+print('比较对象的地址是否相同', a is b)

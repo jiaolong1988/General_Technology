@@ -1,0 +1,58 @@
+# def 函数名（参数列表）:
+```
+def hello (message):
+    print('this is message info :', message)
+
+hello('jiaolong')
+```
+
+# 一、传参：分为可修改参数（list,set,dict） 与 不可修改参数（int,string,tuple）。
+```
+def changeInt(a):
+    a = 10
+
+b = 2
+changeInt(b) #传的是 不可修改参数
+print('b变量的值未改变：',b)
+
+
+
+# 传可变对象实例
+def changeme( mylist ):
+    "修改传入的列表"
+    mylist.append([1,2,3,4])
+    print ("函数内取值: ", mylist)
+
+mylist = [10,30,40]
+changeme(mylist) #传的是 可修改参数
+print('list 列表的内容可变：',mylist)
+```
+
+#二、指定参数 顺序、默认值
+def printinfo(name, age, sex='man'):
+    print("姓名：", name)
+    print("年龄:", age)
+    print("默认性别:", sex)
+    return
+printinfo(age =30, name='jiaolong')
+
+# 可变参数-普通变量
+def printVarInfo(arg, *vartuple):
+    '''打印可变参数'''
+    print(arg)
+    print('可变参数：', vartuple)
+printVarInfo(11,33,44,66,77)
+
+
+# 可变参数-字典参数
+def printVardict(arg1, **vardict ):
+    '''输入可变参数，可变参数为字典类型'''
+    print('字典类型可变参数：', vardict)
+printVardict(11,a=1,b=2,c=3)
+
+
+# *后边的参数，必须 使用参数名传入
+def varinfo(a,b,*,c,d):
+    return c + d
+
+print(varinfo(1,3,d=20,c=10))
