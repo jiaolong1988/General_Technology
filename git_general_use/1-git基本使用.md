@@ -119,29 +119,22 @@
 ### 远程仓库
 
 0. github创建远程仓库
-
 1. 本地生成key
    ssh-keygen -t rsa -C "jiaolong1234567@126.com"
-
 2. 添加ssh-key(将id_rsa.pub 的key信息添加到 github中)
-   https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-
+   [参考地址](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 3. 测试
    ssh -T git@github.com
-
 4. 与 远程仓库 关联
-   git remote add origin git@github.com:jiaolong1988/AI-base.git（远程仓库地址：git@github.com:jiaolong1988/AI-base.git）
-
+   git remote add origin git@github.com:jiaolong1988/AI-base.git
 5. 本地库的所有内容推送到远程库上	
    git push -u origin master
 
  **注意**
 
 1. 由于远程仓库中的README.md文件不在本地代码目录中，因此需代码合并：
-
 2. git pull --rebase origin master
-
-  		3.   [参考](https://jingyan.baidu.com/article/f3e34a12a25bc8f5ea65354a.html)
+3. [参考](https://jingyan.baidu.com/article/f3e34a12a25bc8f5ea65354a.html)
 
 
 
