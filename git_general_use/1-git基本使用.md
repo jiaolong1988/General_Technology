@@ -46,21 +46,19 @@
 
 ### 版本回退
 
-	查看提交历史
-	git log --oneline
+1. 查看提交历史
+   git log --oneline
 
+2. 恢复的上一个版本
+   git reset --hard HEAD^
 
-	恢复的上一个版本
-	git reset --hard HEAD^
-	
-	注意：在Git中，用HEAD表示当前版本，上一个版本HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写成HEAD~100。
-	
-	根据id号码进行恢复
-	git reset --hard f59cf87
+   > 注意：在Git中，用HEAD表示当前版本，上一个版本HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写成HEAD~100。
 
+3. 根据id号码进行恢复
+   git reset --hard f59cf87
 
-	查看命令历史
-	git reflog
+4. 查看命令历史
+   git reflog
 
 ### 工作区和暂存区
 
@@ -87,14 +85,16 @@
 
      **把readme.txt文件在工作区的修改全部撤销，这里有两种情况：**
 
-    		>	1. 在readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
-    		>	2.  在readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+    >	1. 在readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+    >	2. 在readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
 
-​		**总之，就是让这个文件回到最近一次git commit或git add时的状态。**
+​		      **总之，就是让这个文件回到最近一次git commit或git add时的状态。**
+
+
 
 2. 修改的文件已 git add 到暂存区
    	> 1、git reset HEAD readme.txt（把暂存区的修改撤销掉（unstage），重新放回工作区）
-   	2、git checkout -- readme.txt（删除掉所有修改，恢复到上一版本）
+      	2、git checkout -- readme.txt（删除掉所有修改，恢复到上一版本）
 
 3. 总结：
 
@@ -113,13 +113,8 @@
 ### 删除文件
 ​	git rm test.txt（从版本库中删除 文件）
 
-
-
-			> 注意：当删除文件后，想恢复删除的文件时可执行：
-			>
-			> git checkout -- test.txt
-
-
+> ​	注意：当删除文件后，想恢复删除的文件时可执行：
+> ​	git checkout -- test.txt
 
 ### 远程仓库
 
@@ -142,8 +137,10 @@
 
  **注意**
 
-		1. 由于远程仓库中的README.md文件不在本地代码目录中，因此需代码合并：
-  		2. git pull --rebase origin master
+1. 由于远程仓库中的README.md文件不在本地代码目录中，因此需代码合并：
+
+2. git pull --rebase origin master
+
   		3.   [参考](https://jingyan.baidu.com/article/f3e34a12a25bc8f5ea65354a.html)
 
 
