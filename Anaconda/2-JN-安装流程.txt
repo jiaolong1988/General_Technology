@@ -1,0 +1,28 @@
+进入Anaconda终端
+1、检查 jupyter notebook
+	jupyter notebook
+
+2. JN安装：
+	1、检查是否按照
+		jupyter notebook
+		
+	2、安装	
+		Conda: conda install jupyter notebook
+		Pip: pip install jupyter notebook
+
+3.配置路径（必须）		
+	生成配置
+	jupyter notebook --generate-config
+
+4. 修改启动路径	
+	c.NotebookApp.notebook_dir = u'C:\work\code\jupyter'
+	
+5. 安装Markdown插件
+	pip install https://github.com/mli/notedown/tarball/master
+	c.NotebookApp.contents_manager_class = 'notedown.NotedownContentsManager'
+	
+6. 安装扩展插件集合
+	conda install -c conda-forge jupyter_contrib_nbextensions
+
+7. 安装常用python库
+	conda install -y numpy pandas seaborn matplotlib

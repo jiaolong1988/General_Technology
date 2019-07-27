@@ -1,0 +1,25 @@
+在jupyter中同时使用Python2 Python3
+
+方式一、
+#分別用各自的ipython执行下面的指令
+ipython2 kernelspec install-self
+ipython3 kernelspec install-self
+
+
+方式二、
+#添加kernel名称
+python -m ipykernel install --user  
+
+
+第二步、添加插件
+conda install nb_conda
+
+
+第三步、查看jupyter notebook kernel
+jupyter kernelspec list
+
+
+第四步、删除notebook kernel
+jupyter kernelspec remove kernelname
+
+https://blog.csdn.net/u012151283/article/details/54565467

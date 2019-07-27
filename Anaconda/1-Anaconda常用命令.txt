@@ -1,0 +1,40 @@
+一、导出导入环境
+	pip freeze > requirements.txt
+	pip install -r requirements.txt
+
+	#升级工具包
+	pip install -U setuptools
+	python -m pip install --upgrade pip
+	
+	conda导出导入环境
+	conda env export > environment.yaml
+	conda env create -f environment.yaml
+
+二、环境管理
+	conda env list							查询环境
+	conda create -n py3 python=3 nupmy		创建环境(无 env 选项)	
+	conda env remove -n env_name		    删除环境
+
+	Linux进入退出环境
+	source activate my_env		
+	source deactivate				
+
+	Windows进入退出环境
+	activate my_env
+	deactivate		
+
+三、环境中包的管理
+	conda list 查看环境依赖的包。
+	conda list pandas 查看指定依赖包
+	conda install numpy scipy pandas matplotlib 安装多个包
+	conda remove package_name 卸载包
+	conda update package_name 更新包
+	conda search search_term  搜索包
+	
+四、检查环境的包是否需要更新
+	# 更新Anaconda
+	conda update conda
+
+	# 更新所有包
+	conda update --all
+	
