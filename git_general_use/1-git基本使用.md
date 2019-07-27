@@ -24,25 +24,21 @@
    > 	Git is a version control system.
    > 	Git is free software.
 
-   
-
 3. 把文件 添加 到仓库
-    git add readme.txt
-
     
-
+> git add readme.txt
+    
 4. 把文件 提交 到仓库
-    git commit -m "wrote a readme file"
-
     
-
+> git commit -m "wrote a readme file"
+    
 5. 查看当前仓库的状态
-    git status
-
     
-
+> git status
+    
 6. 查看文件是否被修改
-    git diff 文件名
+    
+    > git diff 文件名
 
 ### 版本回退
 
@@ -120,15 +116,20 @@
 
 0. github创建远程仓库
 1. 本地生成key
-   ssh-keygen -t rsa -C "jiaolong1234567@126.com"
+   
+   > ssh-keygen -t rsa -C "jiaolong1234567@126.com"
 2. 添加ssh-key(将id_rsa.pub 的key信息添加到 github中)
-   [参考地址](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   
+   > [参考地址](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 3. 测试
-   ssh -T git@github.com
+   
+   > ssh -T git@github.com
 4. 与 远程仓库 关联
-   git remote add origin git@github.com:jiaolong1988/AI-base.git
+   
+   > git remote add origin https://github.com/jiaolong1988/Machine_Learning.git
 5. 本地库的所有内容推送到远程库上	
-   git push -u origin master
+   
+   > git push -u origin master
 
  **注意**
 
@@ -140,4 +141,6 @@
 
 ### 克隆远程库
 
-​	 git clone git@github.com:jiaolong1988/gitskills.git
+ - git clone git@github.com:jiaolong1988/gitskills.git
+
+   
