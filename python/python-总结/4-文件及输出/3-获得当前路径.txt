@@ -17,6 +17,16 @@ os.remove(path)
 
 
 path = os.path.abspath('..')
+
+
+#获得文件夹下所有文件件
+fs = os.listdir(path)
+for f1 in fs:
+    print(f1)
+	
+	
+	
+#获取指定目录相关文件信息
 def fileNames(file_dir):
     for root, dirs, files in os.walk(file_dir):
         print("-----------")
