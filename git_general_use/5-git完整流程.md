@@ -2,10 +2,10 @@
 
 ### git提交命令
 
-git init 
-git add -A
-git commit -m "机器学习项目提交"
-git status
+- git init  
+- git add -A
+- git commit -m "机器学习项目提交"
+- git status
 
 ### 添加远程仓库地址
 > git remote add origin https://github.com/jiaolong1988/AI-Base.git

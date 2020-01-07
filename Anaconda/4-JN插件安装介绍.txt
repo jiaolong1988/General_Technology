@@ -6,15 +6,15 @@
 
 	选择目录功能
 	运行Jupyter Notebook, 在打开的Notebook界面里, 你会发现多了一个Nbextensions,勾选Table of Contents (有的版本是toc2).
-	
-	
+
+
+​	
 2. 安装missingno（检查数据情况）
 	pip install missingno
 	使用方法：https://blog.csdn.net/Andy_shenzl/article/details/81633356
 	
 	注意：cond install 无法安装或没有安装包的时候，可以使用pip进行安装。
 	
-
 3. Markdown插件安装
 	pip install https://github.com/mli/notedown/tarball/master
 
@@ -22,3 +22,4 @@
 	c.NotebookApp.contents_manager_class = 'notedown.NotedownContentsManager'
 	
     参考：https://blog.csdn.net/tuzixini/article/details/83117542
+

@@ -1,0 +1,6 @@
+# 对每一行数据按";"进行分割，得到一个生成器对象，
+with open("history.txt", "r", encoding="utf8") as f:
+    lines = f.readlines()
+
+# 内部为二维列表结构，可被DataFrame直接读取
+pre_data = map(lambda x: x.split(";"), lines)
