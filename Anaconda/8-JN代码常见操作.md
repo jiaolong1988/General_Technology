@@ -21,7 +21,14 @@
 ### 执行Linux命令
 
 ```
+#执行linux命令
 !pwd
+```
+
+```
+# 将Linx内容赋值给 python变量
+x = !ls 
+x
 ```
 
 
